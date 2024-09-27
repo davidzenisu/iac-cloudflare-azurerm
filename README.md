@@ -11,7 +11,6 @@ Then, depending on your preferred setup, the following configuration has to be s
 If you are using the provided GitHub Actions, make sure the following variables are set as secrets:
 
 - *CLOUDFLARE_API_TOKEN*: Token to authenticate with the Cloudflare API. Should be considered highly sensitive. For more details see [here](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/).
-- *DNS_ZONE_NAME*: Name of the configured DNS domain. Will be treated as sensitive input variable.
 
 ### Environment variables (local development)
 
@@ -22,7 +21,6 @@ Ensure the following environment variables are set.
 If you are running deployments in an non-interactive scenario, consider using the configuration tools provided by your CI/CD platform (e.g. [Github secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions))
 
 - *CLOUDFLARE_API_TOKEN*: Token to authenticate with the Cloudflare API. Should be considered highly sensitive. For more details see [here](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/).
-- *TF_VAR_zone_name* (_optional, recommended_): Name of the configured DNS domain. Will be treated as sensitive input variable.
 
 ### tfvars
 
