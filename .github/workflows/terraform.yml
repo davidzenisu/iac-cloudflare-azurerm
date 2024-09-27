@@ -54,6 +54,9 @@ jobs:
         else 
           exit 0
         fi
+      env:
+        TF_VAR_zone_name: ${{ secrets.DNS_ZONE_NAME }}
+      
         
     # Save plan to artifacts  
     - name: Publish Terraform Plan
