@@ -6,14 +6,15 @@
 			"version": "latest",
 			"tflint": "latest",
 			"terragrunt": "latest"
-		}
+		},
+		"ghcr.io/devcontainers/features/azure-cli:1": {}
 	},
 	"customizations": {
 		"vscode": {
-        "settings": {
-			"files.autoSave": "afterDelay",
-            "editor.formatOnSave": true
-        }
-    }
+			"settings": {
+				"files.autoSave": "afterDelay",
+				"editor.formatOnSave": true
+			}
+		}
 	}
 }
