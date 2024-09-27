@@ -11,7 +11,7 @@ variable "dns_records" {
     type    = string
     proxied = optional(bool, false)
   }))
-  default     = {}
+  default = {}
   validation {
     condition     = length(var.dns_records) > 0 && var.zone_name != null
     error_message = "DNS records can only be configured, if a valid zone name is provided."

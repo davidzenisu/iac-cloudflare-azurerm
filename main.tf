@@ -11,7 +11,7 @@ provider "cloudflare" {
 }
 
 data "cloudflare_zone" "this" {
-  for_each = var.zone_name != null?  { "default": var.zone_name } : {}
+  for_each = var.zone_name != null ? { "default" : var.zone_name } : {}
 
   name = each.value
 }
