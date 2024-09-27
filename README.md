@@ -3,7 +3,8 @@ Repository to manage DNS entries in Cloudflare using IaC
 
 ## Getting started
 
-To get started, the following configuration has to be set:
+To get started, [fork this repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
+Then, depending on your preferred setup, the following configuration has to be set:
 
 ### GitHub Secrets (GitHub Action workflows)
 
