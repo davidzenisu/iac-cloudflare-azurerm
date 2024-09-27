@@ -1,11 +1,11 @@
-# dns_cloudflare
+# iac-cloudflare
 Repository to manage DNS entries in Cloudflare using IaC
 
 ## Getting started
 
 To get started, the following configuration has to be set:
 
-### GitHub Secrets
+### GitHub Secrets (GitHub Action workflows)
 
 If you are using the provided GitHub Actions, make sure the following variables are set as secrets:
 
@@ -15,7 +15,7 @@ If you are using the provided GitHub Actions, make sure the following variables 
 Deploying through GitHub Actions does not require setting environment variables (this is done as part of the workflow).
 *If this is the case, the next section can be skipped!*
 
-### Environment variables
+### Environment variables (local development)is ansible iac
 
 Ensure the following environment variables are set.
 If you are running deployments in an non-interactive scenario, consider using the configuration tools provided by your CI/CD platform (e.g. [Github secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions))
