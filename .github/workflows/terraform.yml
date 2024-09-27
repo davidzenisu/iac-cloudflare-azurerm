@@ -26,6 +26,7 @@ env:
   ARM_BACKEND_ST: "${{ secrets.AZURE_BACKEND_ST }}"
   ARM_BACKEND_CONTAINER: "${{ github.repository_owner }}"
   ARM_BACKEND_KEY: "${{ github.event.repository.name }}.tfstate"
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
 jobs:
   terraform-plan:
@@ -78,9 +79,6 @@ jobs:
         else 
           exit 0
         fi
-      env:
-        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      
         
     # Save plan to artifacts  
     - name: Publish Terraform Plan
