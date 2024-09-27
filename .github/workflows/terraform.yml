@@ -25,7 +25,7 @@ env:
   ARM_BACKEND_RG: "${{ secrets.AZURE_BACKEND_RG }}"
   ARM_BACKEND_ST: "${{ secrets.AZURE_BACKEND_ST }}"
   ARM_BACKEND_CONTAINER: "${{ github.repository_owner }}"
-  ARM_BACKEND_KEY: "${{ github.event.repository.name }}"
+  ARM_BACKEND_KEY: "${{ github.event.repository.name }}.tfstate"
 
 jobs:
   terraform-plan:
