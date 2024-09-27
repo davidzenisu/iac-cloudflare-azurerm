@@ -2,6 +2,7 @@ variable "zone_name" {
   description = "Name of the managed zone. Ideally passed as senstive environment variables (e.g. GitHub secret)."
   type        = string
   sensitive   = true
+  default     = null
 }
 
 variable "dns_records" {
