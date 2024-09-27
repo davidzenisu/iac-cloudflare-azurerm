@@ -9,7 +9,7 @@ variable "dns_records" {
     name    = string
     content = string
     type    = string
-    proxied = optional(boolean, false)
+    proxied = optional(bool, false)
   }))
   default     = {}
   description = <<DESCRIPTION
