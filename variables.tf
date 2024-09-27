@@ -1,7 +1,6 @@
 variable "zone_name" {
   description = "Name of the managed zone. Ideally passed as senstive environment variables (e.g. GitHub secret)."
   type        = string
-  sensitive   = true
   default     = null
 }
 
@@ -13,6 +12,10 @@ variable "dns_records" {
     proxied = optional(bool, false)
   }))
   default     = {}
+  validation {
+    condition     = length(var.dns_records) > 0 && var.zone_name != null
+    error_message = "DNS records can only be configured, if a valid zone name is provided."
+  }
   description = <<DESCRIPTION
 A map of DNS records to create. The map key is deliberately arbitrary to avoid issues where map keys maybe unknown at plan time.
 

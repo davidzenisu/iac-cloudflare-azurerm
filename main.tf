@@ -11,15 +11,15 @@ provider "cloudflare" {
 }
 
 data "cloudflare_zone" "this" {
-  for_each = toset(var.zone_name? ["default"] : [])
+  for_each = var.zone_name != null?  { "default": var.zone_name } : {}
 
-  name = var.zone_name
+  name = each.value
 }
 
 resource "cloudflare_record" "this" {
   for_each = var.dns_records
 
-  zone_id = one(data.cloudflare_zone.this).id
+  zone_id = data.cloudflare_zone.this["default"].id
   name    = each.value.name
   content = each.value.content
   type    = each.value.type
