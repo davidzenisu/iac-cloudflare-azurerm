@@ -12,6 +12,12 @@ If you are using the provided GitHub Actions, make sure the following variables 
 
 - *CLOUDFLARE_API_TOKEN*: Token to authenticate with the Cloudflare API. Should be considered highly sensitive. For more details see [here](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/).
 
+Alternatively, you can run the script `.scripts/init-repo.sh`. After logging into GitHub, the script will set the secret based on your input:
+
+```bash
+bash .scripts/init-repo.sh
+```
+
 ### Environment variables (local development)
 
 Deploying through GitHub Actions does not require setting environment variables (this is done as part of the workflow).
