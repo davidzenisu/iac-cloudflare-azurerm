@@ -27,3 +27,13 @@ If you are running deployments in an non-interactive scenario, consider using th
 ### tfvars
 
 Finally, create a `variables.tfvars` file when working locally or bring in external configuration dynamically as part of your CD to securly configure the different DNS records.
+
+## Sample
+
+The following bash sample let's you test the initial setup (make sure to replace API key and zone name):
+
+```bash
+export CLOUDFLARE_API_TOKEN=XXXXXXXXXXXXXXXXXXXXXXX
+terraform init
+terraform plan -var='dns_records={test={name="test",content="test",type="TXT"}}' -var='zone_name=sample.com'
+```
