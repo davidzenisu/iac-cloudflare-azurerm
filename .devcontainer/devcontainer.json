@@ -7,5 +7,13 @@
 			"tflint": "latest",
 			"terragrunt": "latest"
 		}
+	},
+	"customizations": {
+		"vscode": {
+        "settings": {
+			"files.autoSave": "afterDelay",
+            "editor.formatOnSave": true
+        }
+    }
 	}
 }
