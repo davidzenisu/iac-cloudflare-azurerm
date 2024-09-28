@@ -6,8 +6,8 @@ dns_records = {
     content = "davidzenisu.github.io"
     type    = "CNAME"
   }
-  "azicons" = {
-    name    = "azicons"
+  "github" = {
+    name    = "github"
     content = "davidzenisu.github.io"
     type    = "CNAME"
   }
