@@ -1,9 +1,9 @@
 zone_name = "zeni-su.com"
 
 dns_records = {
-  "sample" = {
-    name    = "test"
-    content = "test"
-    type    = "TXT"
+  "imgh" = {
+    name    = "imgh"
+    content = "https://github.com/davidzenisu/iac-mint"
+    type    = "CNAME"
   }
 }
